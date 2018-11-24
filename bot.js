@@ -1,9 +1,7 @@
 client.on('guildMemberAdd', member => {
-const mohamed= member.guild.channels.get("485710163966296064");
-if(!mohamed) return;
-if(mohamed) {
-setTimeout(() => mohamed.send(` ** Welcome To ** ``Flix-Host ``
-`), 4000)        
-}
+    if(member.guild.id !== '428690920246870016') return;
+    setTimeout(() => {
+        client.channels.get('485710163966296064').send(`${member}** Welcome To Flix Community.**`);
+    }, 1000);
 });
 client.login(process.env.BOT_TOKEN);
